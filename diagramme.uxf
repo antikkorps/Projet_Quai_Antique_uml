@@ -8,12 +8,11 @@ titre: varchar(60)
 description: varchar(255)
 prix: decimal
 --
-type_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>747</y><w>189</w><h>72</h></coordinates><panel_attributes>_Menu_
+type_id: FOREIGN KEY
+categorie_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>747</y><w>189</w><h>72</h></coordinates><panel_attributes>_Menu_
 --
 id: integer AUTO INCREMENT 
-nom_du_menu: varchar(60)
---
-formule_id : FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>207</y><w>189</w><h>99</h></coordinates><panel_attributes>_Reservation_
+nom_du_menu: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>207</y><w>189</w><h>99</h></coordinates><panel_attributes>_Reservation_
 --
 id: integer AUTO INCREMENT
 nombre_de_convives: integer
@@ -107,14 +106,14 @@ horaire_fermeture: DATE
 capacite: integer
 --
 monday_am monday_pm
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>63</x><y>171</y><w>135</w><h>306</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>63</x><y>171</y><w>126</w><h>306</h></coordinates><panel_attributes>lt=-
 m1=1..n
 m2=1..n
 if role id == admin&gt;</panel_attributes><additional_attributes>40;310;20;310;20;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>126</y><w>477</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
 contient &gt;
-&lt; dispose</panel_attributes><additional_attributes>10;20;510;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>36</y><w>126</w><h>477</h></coordinates><panel_attributes>lt=-
+&lt; dispose</panel_attributes><additional_attributes>10;20;510;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>36</y><w>117</w><h>477</h></coordinates><panel_attributes>lt=-
 m1=1..n
 m2=1..n
 if role id == admin&gt;</panel_attributes><additional_attributes>60;500;10;500;10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>486</y><w>198</w><h>171</h></coordinates><panel_attributes>lt=-
