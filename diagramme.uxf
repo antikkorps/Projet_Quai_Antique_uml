@@ -1,36 +1,40 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>280</x><y>530</y><w>210</w><h>70</h></coordinates><panel_attributes>_Role_
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>306</x><y>405</y><w>189</w><h>63</h></coordinates><panel_attributes>_Role_
 --
 id: integer AUTO INCREMENT
-role: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>20</y><w>210</w><h>70</h></coordinates><panel_attributes>_Plats_
+role: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>738</y><w>189</w><h>99</h></coordinates><panel_attributes>_Plats_
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>20</y><w>210</w><h>70</h></coordinates><panel_attributes>_Menu_
+id: integer AUTO INCREMENT
+titre: varchar(60)
+description: varchar(255)
+prix: decimal
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>370</y><w>210</w><h>70</h></coordinates><panel_attributes>_Reservation_
+type_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>747</y><w>189</w><h>72</h></coordinates><panel_attributes>_Menu_
+--
+id: integer AUTO INCREMENT 
+nom_du_menu: varchar(60)
+--
+formule_id : FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>207</y><w>189</w><h>99</h></coordinates><panel_attributes>_Reservation_
 --
 id: integer AUTO INCREMENT
 nombre_de_convives: integer
-date_de_la_reservation: date
-heure_de_la_réservation</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>720</y><w>210</w><h>60</h></coordinates><panel_attributes>_Allergies_
+--
+service_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>594</x><y>576</y><w>189</w><h>54</h></coordinates><panel_attributes>_Allergies_
 --
 id: integer AUTO INCREMENT
-nom_allergene: varchar (60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>210</y><w>210</w><h>80</h></coordinates><panel_attributes>_Galerie_
+nom_allergene: varchar (60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>0</y><w>189</w><h>72</h></coordinates><panel_attributes>_Galerie_
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>210</y><w>210</w><h>80</h></coordinates><panel_attributes>_Horaire_
+id: integer
+titre: varchar(60)
+description: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>126</y><w>189</w><h>81</h></coordinates><panel_attributes>_service_
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>110</y><w>210</w><h>80</h></coordinates><panel_attributes>_capacite_
+id: integer AUTO INCREMENT
+date_reservation: DATE
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>110</y><w>210</w><h>80</h></coordinates><panel_attributes>_service_
+horaire_id: FOREIGN KEY
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>36</x><y>639</y><w>189</w><h>72</h></coordinates><panel_attributes>_categorie_des_plats_
 --
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>60</y><w>210</w><h>80</h></coordinates><panel_attributes>_categorie_des_plats_
---
-id: Long="36548"
-[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>500</y><w>210</w><h>140</h></coordinates><panel_attributes>_Utilisateur_
+id: integer AUTO INCREMENT
+nom_categorie: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>99</x><y>378</y><w>189</w><h>126</h></coordinates><panel_attributes>_Utilisateur_
 --
 id: integer AUTO INCREMENT
 Nom: varchar (60)
@@ -41,7 +45,7 @@ nombre_de_convives: integer
 --
 role_id: FOREIGN KEY
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1000</x><y>610</y><w>210</w><h>210</h></coordinates><panel_attributes>_NOTE : Allergenes courants_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1026</x><y>153</y><w>189</w><h>189</h></coordinates><panel_attributes>_NOTE : Allergenes courants_
 --
 Œuf
 Lait
@@ -53,40 +57,102 @@ Graines de sésame
 Soja
 Sulfites
 Noix
-Blé et triticale</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>450</y><w>200</w><h>100</h></coordinates><panel_attributes>lt=-
+Blé et triticale</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>216</x><y>333</y><w>180</w><h>90</h></coordinates><panel_attributes>lt=-
 m1=1..n
 m2=1
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;50;10;20;170;20;170;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>720</y><w>210</w><h>100</h></coordinates><panel_attributes>_Allergies utilisateur_
+&lt; correspond à</panel_attributes><additional_attributes>10;50;10;20;170;20;170;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>297</x><y>576</y><w>189</w><h>90</h></coordinates><panel_attributes>_Allergies utilisateur_
 --
 id: integer AUTO INCREMENT
 --
 allergie_id: FOREIGN KEY
-user_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>630</y><w>340</w><h>110</h></coordinates><panel_attributes>lt=-
+user_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>243</x><y>495</y><w>207</w><h>99</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;10;10;30;300;30;300;90</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>660</y><w>220</w><h>80</h></coordinates><panel_attributes>lt=-
+&lt; correspond à</panel_attributes><additional_attributes>10;10;10;30;190;30;190;90</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>522</y><w>198</w><h>72</h></coordinates><panel_attributes>lt=-
 m1=1..n
 m2=1
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;60;10;20;190;20;190;60</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>390</y><w>450</w><h>130</h></coordinates><panel_attributes>lt=-
+&lt; correspond à</panel_attributes><additional_attributes>10;60;10;20;190;20;190;60</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>225</y><w>405</w><h>171</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;110;10;20;430;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>490</y><w>290</w><h>100</h></coordinates><panel_attributes>_Allergies convives_
+&lt; correspond à</panel_attributes><additional_attributes>10;170;10;20;430;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>369</y><w>261</w><h>90</h></coordinates><panel_attributes>_Allergies convives_
 --
 id: integer AUTO INCREMENT
 --
 allergie_id: FOREIGN KEY
 reservation_id: FOREIGN KEY
 --
-Doit récupérer l'info des allergies de l'utilisateur</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>580</y><w>160</w><h>160</h></coordinates><panel_attributes>lt=-
+Doit récupérer l'info des allergies de l'utilisateur</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>450</y><w>144</w><h>144</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;10;10;40;120;40;120;140</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>430</y><w>250</w><h>80</h></coordinates><panel_attributes>lt=-
+&lt; correspond à</panel_attributes><additional_attributes>10;10;10;40;120;40;120;140</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>297</y><w>225</w><h>90</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1..n
 a &gt;
-&lt; correspond à</panel_attributes><additional_attributes>10;10;10;40;210;40;210;60</additional_attributes></element></diagram>
+&lt; correspond à</panel_attributes><additional_attributes>10;10;10;60;210;60;210;80</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>198</y><w>180</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+appartient &gt;
+&lt; contient</panel_attributes><additional_attributes>10;70;170;70;170;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>117</x><y>99</y><w>189</w><h>117</h></coordinates><panel_attributes>_horaire_ouverture_
+--
+id: integer AUTO INCREMENT
+jour_ouverture: varchar
+horaire_ouverture: DATE
+horaire_fermeture: DATE
+capacite: integer
+--
+monday_am monday_pm
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>63</x><y>171</y><w>135</w><h>306</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+if role id == admin&gt;</panel_attributes><additional_attributes>40;310;20;310;20;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>126</y><w>477</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+contient &gt;
+&lt; dispose</panel_attributes><additional_attributes>10;20;510;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>36</y><w>126</w><h>477</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+if role id == admin&gt;</panel_attributes><additional_attributes>60;500;10;500;10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>486</y><w>198</w><h>171</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+if role id == admin&gt;</panel_attributes><additional_attributes>110;10;30;10;30;100;180;100;180;170</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>693</y><w>666</w><h>72</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+appartient à &gt;
+&lt; contient</panel_attributes><additional_attributes>10;50;10;20;700;20;700;60</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>702</y><w>99</w><h>126</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+a &gt;
+&lt; a</panel_attributes><additional_attributes>10;10;10;110;90;110</additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>774</y><w>153</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+a &gt;
+&lt; a</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>747</y><w>189</w><h>81</h></coordinates><panel_attributes>_Type_de_plat_
+--
+id: integer AUTO INCREMENT
+nom_type: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>495</y><w>189</w><h>108</h></coordinates><panel_attributes>_Formule_
+--
+id: integer AUTO INCREMENT
+nom_formule: varchar (60)
+description: varchar(60)
+prix: decimal
+--
+plat_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>594</y><w>891</w><h>162</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+appartient&gt;</panel_attributes><additional_attributes>10;160;10;110;950;110;950;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1026</x><y>747</y><w>189</w><h>72</h></coordinates><panel_attributes>_menu_formule_
+--
+id: integer AUTO INCREMENT
+--
+menu_id: FOREIGN KEY
+formule_id: FOREIGN KEY</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>882</x><y>765</y><w>162</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+peut être dans &gt;</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1152</x><y>594</y><w>90</w><h>171</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..n
+appartient &gt;</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>
