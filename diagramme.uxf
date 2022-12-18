@@ -25,7 +25,8 @@ nom_allergene: varchar (60)</panel_attributes><additional_attributes></additiona
 --
 id: integer
 titre: varchar(60)
-description: varchar(60)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>126</y><w>189</w><h>81</h></coordinates><panel_attributes>_service_
+description: varchar(60)
+path: varchar(255)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>756</x><y>126</y><w>189</w><h>81</h></coordinates><panel_attributes>_service_
 --
 id: integer AUTO INCREMENT
 date_reservation: DATE
