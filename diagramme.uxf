@@ -41,7 +41,6 @@ Nom: varchar (60)
 Prenom:varchar (60)
 Mail: varchar (60)
 # Mot_de_passe: varchar (60)
-nombre_de_convives: integer
 --
 role_id: FOREIGN KEY
 
